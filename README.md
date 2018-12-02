@@ -1,0 +1,1 @@
+Esta aplicação utiliza Node e Expressjs como principais tecnologias e faz coleta de vagas de empregos através da API do GITHUB

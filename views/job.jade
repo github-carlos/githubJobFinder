@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    div(class="container with-title")
+        h1(class="title")= jobInfo.title + ' - ' + jobInfo.location
+
+        section(class="container is-dark with-title job-description")
+            h2(class="title") Descriçao
+            p= jobInfo.description
+        section(class="container with-title")
+            h2(class="title") Empresa
+            a(href=jobInfo.company_url)
+                span= jobInfo.company
+        section(class="container with-title")
+            h2(class="title") Tipo de Contrato
+            p= jobInfo.type
+        section(class="container with-title")
+            h2(class="title") Publicado em
+            p= jobInfo.created_at
+        section(class="container with-title")
+            h2(class="title") Como concorrer
+            p= jobInfo.how_to_apply
+        a(class="btn", href="/") Voltar

@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  #messages
+    div
+      i(class="octocat animate")
+      div(class="balloon from-left")
+        p= title
+  p Welcome to #{title}
+  
+  #container
+    form(id="formJob")
+      input(type="text", class="input", placeholder="Digite a tecnologia para buscar por vagas", id="description")
+      br
+      br
+      input(type="text", class="input", placeholder="Localização", id="location")
+      br
+      div
+        span Período integral:
+        select(id="full_time")
+          option(value="true") Sim
+          option(value="false") Não
+          option(value="both") Ambos
+    button(class='btn is-primary', onclick="buscarEmpregos()") Buscar
+
+    div(id="tableJobs", class="tableJobs")
